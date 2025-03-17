@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19</title>
+</head>
+
+<body>
+
+    <div id="div">
+        <h2> Auxílio Emergencial Covid-19 </h2>
+        <label for="ipt_rendai"> Digite a sua renda individual: </label> <br>
+        <input class="ipt" type="text" id="ipt_rendai"> <br>
+        <label for="ipt_rendaf"> Digite a sua renda familiar: </label> <br>
+        <input class="ipt" type="text" id="ipt_rendaf"> <br>
+        <button class="bot" onclick="verifica()"> Terei o benefício </button>
+        <p id="p_resp"> </p>
+    </div>
+
+</body>
+
+<script>
+
+    function verifica(){
+        var rendai = Number(ipt_rendai.value) 
+        var rendaf = Number(ipt_rendaf.value)
+
+        if (rendai <= 2000 || rendaf <= 3000){
+            p_resp.innerHTML = `Você terá direito ao auxílio`
+        }
+        else {
+            p_resp.innerHTML = `Sem direito ao auxílio`
+        }
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: peachpuff;
+}
+.bot{
+    border-radius: 81%;
+}
+.ipt{
+    border-radius: 20%;
+}
+
+
+</style>
+
+</html>

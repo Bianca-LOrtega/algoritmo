@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequência </title>
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Analisador de frequência escolar! </h1>
+        <label for="ipt_f"> Digite a frequência do aluno</label>
+        <input type="text" id="ipt_f"> <br>
+        <button class="bot" onclick="freq()"> Analisar frequência </button>
+        <p class="p1" id="pf"> </p>
+    </div>
+
+   
+</body>
+
+<script>
+
+    function freq() {
+        var freq = Number(ipt_f.value)  
+
+        if (freq >= Number(50)) {
+            pf.innerHTML = ` <img src="https://img.myloview.com.br/adesivos/estudante-estudioso-fazendo-licao-de-casa-400-46132973.jpg"> `
+        }
+        else {
+            
+            pf.innerHTML = `<img src="https://st.depositphotos.com/1985863/4960/v/950/depositphotos_49608065-stock-illustration-tourist.jpg">`
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(111, 95, 216);
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+.p1{
+    background-color: rgb(119, 104, 214);
+}
+
+</style>
+
+</html>

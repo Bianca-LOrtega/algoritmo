@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco XPTO</title>
+
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Análise de Cheque Especial ! </h1>
+        <label for="ipt_saldo"> Digite o saldo da sua conta </label>
+        <input type="text" id="ipt_saldo"> <br>
+        <label for="ipt_debito"> Digite o valor do débito !</label>
+        <input type="text" id="ipt_debito"> <br>
+        <button class="bot" onclick="valor()"> Analisar conta  </button>
+        <p class="p1" id="p_conta"> </p>
+    </div>
+
+   
+</body>
+
+<script>
+
+    function valor() {
+        var valor = Number(ipt_saldo.value) - Number(ipt_debito.value)
+
+        if (valor >= Number(0)) {
+            p_conta.innerHTML = ` <i class="pa" > O saldo atual da conta corrente é ${ valor } ! </i> `
+        }
+        else {
+            p_conta.innerHTML = `
+            <p class="pv"> <b> O saldo atual da conta corrente é ${ valor } </b> </p>  `
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(112, 128, 145);
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+.p1{
+    background-color: rgb(116, 134, 153);
+}
+.pv{
+    color: rgb(179, 12, 12);
+}
+.pa{
+    color: rgb(15, 12, 179);
+}
+
+</style>
+
+</html>

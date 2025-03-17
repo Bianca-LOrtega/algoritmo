@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refrigerante</title>
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Consumo anual de Refrigerante</h1>
+        <label for="ipt_refri"> Quantos Refri você consome por dia? </label>
+        <input type="text" id="ipt_refri">
+        <button class="bot" onclick="Refri()"> Calcular </button>
+        <h3 id="h3_refri"> </h3>
+
+
+    </div>
+
+</body>
+
+<script>
+
+    function Refri() {
+        var refri = Number(ipt_refri.value) * Number(365)
+
+        if (Number(refri) < 500) {
+            h3_refri.innerHTML = ` Você consome ${refri} refrigerantes por ano  `
+        }
+        else {
+            h3_refri.innerHTML = ` Você consome ${refri} refrigerantes por ano <br> Cuidado com a diabetes! `
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: rgb(252, 252, 65);
+        font: italic;
+    }
+
+    .bot {
+        border-radius: 90%;
+    }
+
+    .h3 {
+        background-color: rgb(255, 255, 97);
+    }
+</style>
+
+</html>

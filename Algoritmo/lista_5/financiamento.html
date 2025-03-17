@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento</title>
+
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Análise de Financiamento Habitacional ! </h1>
+        <label for="ipt_renda"> Digite o valor da renda familiar </label>
+        <input type="text" id="ipt_renda"> <br>
+        <label for="ipt_presta"> Digite o valor da prestação !</label>
+        <input type="text" id="ipt_presta"> <br>
+        <button class="bot" onclick="valor()"> Verificar financiamento </button>
+        <p class="p1" id="p_finan"> </p>
+    </div>
+
+   
+</body>
+
+<script>
+
+    function valor() {
+        var valor = ( ( Number(ipt_presta.value) / Number(ipt_renda.value) ) * Number(100) )
+
+        if (valor <= Number(30)) {
+            p_finan.innerHTML = ` A prestação corresponde a ${ valor }% da renda familiar!`
+        }
+        else {
+            p_finan.innerHTML = ` A prestação corresponde a ${ valor }% da renda familiar! <br>
+            <p class="pv"> <b>  Será necessário complementar a renda familiar </b> </p>  `
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(235, 137, 235);
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+.p1{
+    background-color: rgb(238, 154, 238);
+}
+.pv{
+    color: rgb(179, 12, 12);
+}
+
+</style>
+
+</html>

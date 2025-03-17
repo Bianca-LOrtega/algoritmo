@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado BOM DOCE</title>
+
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Promoção mercado BOM DOCE! </h1>
+        <label for="ipt_qtd"> Digite a quantidade de chocolate que você irá levar</label>
+        <input type="text" id="ipt_qtd"> <br>
+        <button class="bot" onclick="valor()"> Compra </button>
+        <p class="p1" id="pvalor"> </p>
+    </div>
+
+   
+</body>
+
+<script>
+
+    function valor() {
+        var valor = Number(ipt_qtd.value)  
+
+        if (valor >= Number(12)) {
+            var desconto = valor * Number(2.5)
+            pvalor.innerHTML = ` o valor da sua compra foi de ${desconto} `
+        }
+        else {
+            var normal = valor * Number(3)
+            pvalor.innerHTML = `
+            o valor da sua compra foi de ${normal} `
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(104, 124, 143);
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+.p1{
+    background-color: rgb(99, 125, 150);
+}
+
+</style>
+
+</html>

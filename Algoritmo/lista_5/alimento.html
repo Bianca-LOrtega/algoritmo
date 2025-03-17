@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alimento </title>
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Analisador de temperatura adequada! </h1>
+        <label for="ipt_t"> Digite a temperatura do lugar </label>
+        <input type="text" id="ipt_t"> <br>
+        <button class="bot" onclick="temp()"> Analisar temperatura </button>
+        <p class="p1" id="pt"> </p>
+    </div>
+
+   
+</body>
+
+<script>
+
+    function temp() {
+        var temp = Number(ipt_t.value)  
+
+        if (temp >= Number(10)) {
+            pt.innerHTML = ` <img src=" https://p2.trrsf.com/image/fget/cf/774/0/images.terra.com/2023/10/16/istock-1246180788-t4hu1awm8f1w.jpg"> `
+        }
+        else {
+            
+            pt.innerHTML = `<img src=" https://images.squarespace-cdn.com/content/v1/59a8480fccc5c52fff14d38a/0201d261-1c46-4315-b61a-448331e8eef1/Capas+Sa%C3%BAde+Integral++%282%29.jpg">`
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: sienna;
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+.p1{
+    background-color: rgb(175, 89, 48);
+}
+
+</style>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Peso médio no elevador! </h1>
+        <label for="ipt_h"> Digite quantos homens entraram no elevador! </label>
+        <input type="text" id="ipt_h"> <br>
+        <label for="ipt_m"> Digite quantas mulheres entraram no elevador!</label>
+        <input type="text" id="ipt_m"> <br>
+        <button class="bot" onclick="peso()"> Analisar peso </button>
+        <p class="p1" id="p_peso"> </p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function peso() {
+        var peso = (Number(ipt_h.value) * Number(80)) + (Number(ipt_m.value) * Number(60))
+
+        if (peso <= Number(800)) {
+            p_peso.innerHTML = ` Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso}kg !`
+        }
+        else {
+            p_peso.innerHTML = `Este elevador suporta 800 Kg e o peso estimado desta lotação é de ${peso}kg <br> 
+            <p class="pv"> Será necessário que alguém desça para que o elevador se movimente </p>  `
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: rgb(236, 112, 90);
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    .p1 {
+        background-color: rgb(248, 132, 112);
+    }
+
+    .pv {
+        color: rgb(21, 21, 245);
+    }
+</style>
+
+</html>

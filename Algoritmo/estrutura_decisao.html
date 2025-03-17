@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero</title>
+</head>
+<body>
+
+    <div id="div"> 
+    <label for="ipt_num"> Digite um numero !</label>
+    <input type="text" id="ipt_num"> 
+    <button class="bot" onclick="avaliarnum()">  Validar </button>
+    <h3 id="h3_resposta"> </h3>
+    </div>
+
+</body>
+
+<script>
+
+function avaliarnum(){
+    var numResposta = 42;
+    var numDig = Number(ipt_num.value);
+
+
+    if(numDig > numResposta){ 
+        h3_resposta.innerHTML= ` Seu número é maior ! `
+    }
+    if(numDig < numResposta){ 
+        h3_resposta.innerHTML= ` Seu número é menor ! `
+    }
+    if(numDig == numResposta){ 
+        h3_resposta.innerHTML= ` Acertou!! `
+    }
+        
+}
+
+</script>
+
+<style>
+
+#div{
+    text-align: center ;
+    background-color: rgb(66, 231, 215)
+}
+
+.bot{
+    border-radius: 60%;
+
+}
+
+
+</style>
+
+</html>

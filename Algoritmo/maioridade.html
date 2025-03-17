@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+  
+    <div> 
+
+        <label for="ipt_idd"> </label>
+        <input type="text" id="ipt_idd">
+        <buton onclick="verificar()" > Validar  </buton>
+        <h3 id="h3_idade"> </h3>
+
+    </div>
+
+</body>
+
+<script>
+
+function verificar(){
+    var idadeDig = Number(ipt_idd.value)
+
+    if (idadeDig >= 18){
+        h3_idade.innerHTML = `Você já pode ser preso! `
+    }
+    else { 
+        h3_idade.innerHTML = `Não pode beber! `
+    }
+
+}
+
+</script>
+
+
+</html>

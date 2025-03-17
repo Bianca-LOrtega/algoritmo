@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div> 
+    <h1> </h1>
+    <label for="ipt_cor"> </label>
+    <input type="text" id="ipt_cor">
+    <button onclick="cor()">Validar  </button>
+    </div>
+
+</body>
+
+<script>
+
+    function cor(){
+        var bandeira = ipt_cor.value
+
+        if (bandeira == 'amarela'){
+            alert('Bandeira amarela')
+        }
+        else if (bandeira == 'vermelha'){
+            alert('Bandeira vermelha')
+        }
+        else if (bandeira == 'azul'){
+            alert('Bandeira azul')
+        }
+        else {
+            alert('Bandeira invalida')
+        }
+
+    }
+
+</script>
+
+
+</html>

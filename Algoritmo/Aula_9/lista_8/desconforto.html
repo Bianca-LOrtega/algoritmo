@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconforto</title>
+</head>
+
+<body>
+
+    <div id="div">
+        <h2> Alerta de Desconforto Térmico </h2>
+        <label for="ipt_temp"> Digite a temperatura: </label> <br>
+        <input class="ipt" type="text" id="ipt_temp"> <br>
+        <button class="bot" onclick="verifica()"> Analisar clima </button>
+    </div>
+
+</body>
+
+<script>
+
+    function verifica(){
+        var temp = Number(ipt_temp.value) 
+
+        alert("Alerta de desconforto!" )
+
+        if (temp < 21){
+            alert("As pessoas vão ter hipotermia")
+        }
+        else if ( temp > 24) {
+            alert( "As pessoas vão derreter")
+        }
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: papayawhip;
+}
+.bot{
+    border-radius: 81%;
+}
+.ipt{
+    border-radius: 20%;
+}
+
+
+</style>
+
+</html>

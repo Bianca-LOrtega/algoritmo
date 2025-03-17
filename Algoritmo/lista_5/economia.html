@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economia</title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Alcance a sua meta ! </h1>
+        <label for="ipt_meta"> Digite qual a sua meta de economia! </label>
+        <input type="text" id="ipt_meta"> <br>
+        <label for="ipt_tem"> Digite quanto tem guardado!</label>
+        <input type="text" id="ipt_tem"> <br>
+        <button class="bot" onclick="meta()"> Analisar economia</button>
+        <p class="p1" id="p_meta"> </p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function meta() {
+        var meta = Number(ipt_meta.value) 
+        var guardado = Number(ipt_tem.value) 
+     
+        if (guardado == meta ) {
+            p_meta.innerHTML = ` <p class="pg"> Parabéns, meta alcançada! </p> `
+        }
+        else if (guardado > meta ){
+            p_meta.innerHTML = ` <p class="pg"> Parabéns, meta alcançada! <br> 
+                Meta ultrapassada em ${ guardado - meta  } </p>  `
+        }
+        else {
+            p_meta.innerHTML = ` <p class="pr"> Força! Ainda em busca da meta! <br>  Falta ${meta - guardado  } </p> `
+        
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: seagreen;
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    .p1 {
+        background-color: rgb(50, 145, 91);
+    }
+
+    .pg {
+        color: rgb(30, 226, 79);
+    }
+    .pr {
+        color: rgb(224, 55, 55);
+    }
+
+</style>
+
+</html>

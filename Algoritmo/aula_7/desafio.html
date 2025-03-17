@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorvete </title>
+
+</head>
+
+<body>
+
+    <div id="div">
+    <h1> Desconto do sortevte</h1>
+    <h3>Tabela de desconto</h3> 
+    <p>
+       1- Temperatura até 19ºC (10% de desconto) <br>
+       2- Temperatura até 29ºC (20% de desconto) <br> 
+       3- Temperatura até 39ºC (30% de desconto) <br> 
+       4- Temperatura maior que 40ºC (40% de desconto) <br> 
+    </p>
+    <label for="ipt_n">Digite um número referente aos descontos de temperaturas</label>
+    <input type="text" id="ipt_n"> 
+    <button class="bot" onclick="numero()">Validar </button>
+    <p class="p1" id="pnum"> </p>
+    </div>
+
+</body>
+<script> 
+
+    function numero(){
+        var num = Number(ipt_n.value)
+
+        if (num > Number(4) ) {
+             pnum.innerHTML = `<p class="p2"> Valor inválido </p>` 
+             
+        }
+        else if (num < Number(0) ){
+            pnum.innerHTML = `<p class="p2"> Valor inválido </p>`
+        }
+        else {
+             pnum.innerHTML = `Você aplicará a opção ${num} de desconto`
+        }
+           
+    }
+
+</script>
+
+<style>
+
+    #div{
+        text-align: center;
+        background-color: rgb(132, 204, 233);
+    }
+    .bot{
+        height: 30px;
+        border-radius: 70%;
+    }
+    .p1{
+        background-color: rgb(124, 194, 221);
+    }
+    .p2{
+        color: red;
+        font: bold;
+    }
+    
+    </style>
+    
+
+</html>

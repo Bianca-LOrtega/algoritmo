@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div> 
+        <h2> Simulador de ganho Finandeiro  </h2>
+        <label for="ipt_area"> Digite a Área de seu latifúndio em hectare:</label> <br>
+        <input type="number" id="ipt_area"> <br>
+        <label for="ipt_prodmedia"> Digite sua produção média por hectare: </label> <br>
+        <input type="number" id="ipt_prodmedia"> <br>
+        <label for="ipt_tipo"> Digite o tipo da sua plantação: </label> <br>
+        <input type="text" id="ipt_tipo"> <br>
+        <label for="ipt_imposto"> Digite quanto você paga no imposto de renda: </label> <br>
+        <input type="number" id="ipt_imposto"> <br>
+        <button onclick="verificar()"></button>
+    </div>
+
+</body>
+
+<script>
+
+    function verificar(){
+        var area = Number(ipt_area.value)
+        var mediaprod = Number(ipt_prodmedia.value)
+        var imposto = Number(ipt_imposto.value)
+        var tipo = ipt_tipo.value
+        var prodtotal = area * mediaprod 
+        var impostod = imposto * 
+
+        if ( tipo == 'soja' ){
+
+            
+
+
+        }
+
+    }
+
+
+</script>
+
+
+
+</html>

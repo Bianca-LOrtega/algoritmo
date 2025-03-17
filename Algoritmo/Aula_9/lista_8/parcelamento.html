@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcelamento</title>
+</head>
+
+<body>
+
+    <div id="div">
+        <h2> Análise de Parcelamento de Compra </h2>
+        <label for="ipt_modo"> Digite o modo de pagamento: </label> <br>
+        <input class="ipt" type="text" id="ipt_modo"> <br>
+        <button class="bot" onclick="verifica()"> Analisar compra </button>
+        <p id="p_resp"> </p>
+    </div>
+
+</body>
+
+<script>
+
+    function verifica(){
+        var modo = ipt_modo.value
+
+        if (modo == 'dinheiro' || modo == 'débito'){
+            p_resp.innerHTML = `Você terá que pagar a vista`
+        }
+        else {
+            p_resp.innerHTML = `Pagamento poderá ser parcelado`
+        }
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: papayawhip;
+}
+.bot{
+    border-radius: 81%;
+}
+.ipt{
+    border-radius: 20%;
+}
+
+
+</style>
+
+</html>

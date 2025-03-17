@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Senha</title>
+</head>
+
+<body>
+
+    <label> Digite seu login: </label>
+    <input type="text" id="ipt_log"> <br>
+    <label> Digite sua senha: </label>
+    <input type="password" id="ipt_senha"> <br>
+    <button onclick="verifica()"> Entrar </button>
+
+</body>
+
+<script>
+
+    function verifica() {
+
+        var login = ipt_log.value
+        var senha = ipt_senha.value
+
+        if (login == 'SPTech' && senha == 'digital' ) {
+            alert("Usuário autenticado com sucesso")
+        }
+        else {
+            alert("Falha na autenticação")
+        }
+
+    }
+
+</script>
+
+</html>

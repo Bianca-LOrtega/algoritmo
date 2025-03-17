@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentes Brilhantes</title>
+</head>
+
+<body>
+
+    <div id="div">
+        <h2> Processo Seletivo Mentes Brilhantes </h2>
+        <label for="ipt_enem"> Digite a nota ENEM: </label> <br>
+        <input class="ipt" type="text" id="ipt_enem"> <br>
+        <label for="ipt_vest"> Digite a nota do vestibular interno: </label> <br>
+        <input class="ipt" type="text" id="ipt_vest"> <br>
+        <button class="bot" onclick="verifica()"> Avaliação </button>
+    </div>
+
+</body>
+
+<script>
+
+    function verifica(){
+        var enem = Number(ipt_enem.value) 
+        var vest = Number(ipt_vest.value)
+
+        if (enem >= 800 || vest >= 700){
+            alert(`Parabéns! Aprovado `)
+        }
+        else {
+            alert(`Tente semestre que vem!`)
+        }
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: peru;
+}
+.bot{
+    border-radius: 81%;
+}
+.ipt{
+    border-radius: 20%;
+}
+
+
+</style>
+
+</html>

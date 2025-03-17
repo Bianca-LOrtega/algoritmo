@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz</title>
+
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Calculo conta de Luz! </h1>
+        <label for="ipt_kwh"> Digite o consumo de KWh por mês da sua casa!</label>
+        <input type="text" id="ipt_kwh"> <br>
+        <button class="bot" onclick="valor()"> Calcular conta de luz</button>
+    </div>
+
+   
+</body>
+
+<script>
+
+    function valor() {
+        var conta = (Number(ipt_kwh.value) * Number(0.85) )
+
+        if (conta <= Number(100)) {
+            alert( `Valor da conta mensal R$${ Number(conta) * Number(0.9)} !`) 
+        }
+        else {
+           alert( ` Valor da conta mensal R$${conta}` )
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(250, 229, 190);
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+
+</style>
+
+</html>

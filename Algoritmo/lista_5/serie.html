@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Série</title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Tempo médio gasto com Séries SITCOM! </h1>
+        <label for="ipt_serie"> Digite a última série que você assistiu! </label>
+        <input type="text" id="ipt_serie"> <br>
+        <label for="ipt_ep"> Digite quantos episódios que você assistiu!</label>
+        <input type="text" id="ipt_ep"> <br>
+        <button class="bot" onclick="horas()"> Verificar Nível </button>
+        <p class="p1" id="p_horas"> </p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function horas () {
+        var nome = ipt_serie.value
+        var horas = ( Number(ipt_ep.value) * Number(22) ) / Number(60)
+
+        if (horas <= Number(30)) {
+            p_horas.innerHTML = ` Vejo que você gosta da série ${nome }!`
+        }
+        else {
+            p_horas.innerHTML = `Vejo que você gosta da série ${nome } <br> 
+            <p> Uau, você realmente gosta dessa série! </p>  `
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: rgb(230, 196, 230);
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    .p1 {
+        background-color: rgb(233, 206, 233);
+    }
+
+
+</style>
+
+</html>

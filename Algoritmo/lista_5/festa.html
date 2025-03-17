@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festa</title>
+
+</head>
+
+<body>
+
+<div id="div">
+    <h1> Idade para a Festa!</h1>
+    <label for="ipt_idd"> Qual a sua idade ? </label>
+    <input class="ipt" type="text" id="ipt_idd"> 
+    <button class="bot" onclick="validar()" > Ir a Festa </button>
+</div>
+
+</body>
+
+<script>
+
+    function validar(){
+        var Idd = ipt_idd.value
+        
+        if (Idd < 18 ){
+            alert (`Pedir permissão pro responsável #partiuFesta`)
+
+        } 
+        else {
+            alert (`#partiuFesta `)
+
+        }
+
+
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(192, 241, 92);
+    font-style: italic;
+}
+.bot{
+    border-radius: 60%;
+}
+.ipt{
+    width: 90px;
+    height: 20px;
+    border-radius: 30%;
+}
+
+</style>
+
+</html>

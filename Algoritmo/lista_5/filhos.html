@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filhos</title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Filhos! </h1>
+        <label for="ipt_filho"> Digite a quantidade de filhos que você tem! </label>
+        <input type="text" id="ipt_filho"> <br>
+        <button class="bot" onclick="filho()"> Analisar família </button>
+        <p class="p1" id="p_filho"> </p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function filho() {
+        var filho = Number(ipt_filho.value) 
+        
+
+        if (filho >= Number(1)) {
+            p_filho.innerHTML = ` Não tem TV! `;
+
+            if (filho >= Number(2))
+            p_filho.innerHTML = `Não tem TV! <br> 
+                                Não tem internet `;
+        
+                if (filho >= Number(3) ) 
+                p_filho.innerHTML = `Não tem TV! <br> 
+                                     Não tem internet <br>
+                                     Não tem video game `;
+                    
+                    if (filho >= Number(4) ) 
+                    p_filho.innerHTML = `Não tem TV! <br> 
+                                         Não tem internet <br>
+                                         Não tem video game <br> 
+                                         Não tem Netflix `;
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: rgb(211, 179, 137);
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    .p1 {
+        background-color: rgb(216, 185, 143);
+    }
+
+</style>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desempenho</title>
+</head>
+
+<body>
+
+    <label> Digite a nota do aluno: </label>
+    <input type="text" id="ipt_nota"> 
+    <button onclick="verifica()"> Avaliar horário </button>
+
+</body>
+
+<script>
+
+    function verifica() {
+
+        var nota = Number(ipt_nota.value)
+        
+
+        if (nota >= 6 && nota < 8.5 ){
+            alert("Aluno comum e aprovado")
+
+        }
+        else if (nota >= 8.5 && nota <= 10) {
+            alert(`Não é recomendável que você assista sua série favorita no horário ${hora}!` )
+        }
+        else {
+            alert("Aluno não aprovado")
+        }
+
+    }
+
+</script>
+
+</html>

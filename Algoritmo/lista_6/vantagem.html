@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantagem esportiva </title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Descubra Sua Vantagem Competitiva! </h1>
+        <label for="ipt_alt"> Digite a sua altura em centímetros! </label>
+        <input type="text" id="ipt_alt"> <br>
+        <button class="bot" onclick="veri()"> Analisar Estatura</button>
+        <p class="p1" id="p_resul"> </p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function veri() {
+        var alt = Number(ipt_alt.value)
+
+
+        if (alt < Number(165)) {
+            p_resul.innerHTML = ` <p> Você pode ser piloto de corrida! </p> `
+        }
+        else if (alt < Number(180) ) {
+            p_resul.innerHTML = ` <p> Você pode ser jogador de futebol! </p>  `
+        }
+        else {
+            p_resul.innerHTML = ` <p> Você pode ser jogador de vôlei ou basquete! </p> `
+
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: sandybrown;
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    .p1 {
+        background-color: rgb(231, 149, 77);
+    }
+</style>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aluno</title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Notas: </h1>
+        <label for="ipt_n1"> Digite uma nota! </label>
+        <input type="text" id="ipt_n1"> <br>
+        <label for="ipt_n2"> Digite uma segunda nota! </label>
+        <input type="text" id="ipt_n2"> <br>
+        <button class="bot" onclick="media()"> Verificar situação </button>
+        <p id="pn"> </p>
+    </div>
+
+
+</body>
+
+<script>
+
+    function media() {
+        var media = ( Number(ipt_n1.value) + Number(ipt_n2.value)) / Number(2)
+        
+
+        if (media >= Number(6)) {
+            pn.innerHTML = `Parabéns, aprovado!`
+        }
+        else {
+            pn.innerHTML = `Tente outra vez...`
+        }
+        
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: rgb(194, 192, 192);
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    .p1 {
+        background-color: rgb(199, 199, 199);
+    }
+   
+
+
+</style>
+
+</html>

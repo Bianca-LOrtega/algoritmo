@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevador</title>
+
+</head>
+
+<body>
+
+    <div id="div">
+        <h1> Peso do Elevador! </h1>
+        <label for="ipt_peso"> Digite o peso do elevador! </label>
+        <input type="text" id="ipt_peso"> <br>
+        <button class="bot" onclick="peso()"> Ligar elevador </button>
+        
+    </div>
+
+
+</body>
+
+<script>
+
+    function peso() {
+        var peso = Number(ipt_peso.value) 
+        
+
+        if (peso < Number(500)) {
+            alert ('Elevador vai se mover' )
+        }
+        else 
+        {
+            alert ('Alguém precisa descer do elevador' )
+        }
+
+    }
+
+</script>
+
+<style>
+    #div {
+        text-align: center;
+        background-color: rgb(66, 115, 155);
+    }
+
+    .bot {
+        height: 30px;
+        border-radius: 70%;
+    }
+
+    
+
+</style>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas</title>
+
+</head>
+
+<body>
+
+    <div id="div" >
+        <h1> Média de notas! </h1>
+        <label for="ipt_n1"> Digite sua nota 1</label>
+        <input type="text" id="ipt_n1"> <br>
+        <label for="ipt_n2"> Digite sua nota 2</label>
+        <input type="text" id="ipt_n2"> <br>
+        <label for="ipt_n3"> Digite sua nota 3</label>
+        <input type="text" id="ipt_n3"> <br>
+        <button class="bot" onclick="notas()"> Analisar desempenho! </button>
+        <h3 class="h3" id="h3_notas"> </h3>
+    </div>
+
+</body>
+
+<script>
+
+    function notas() {
+        var média = (Number(ipt_n1.value) + Number(ipt_n2.value) + Number(ipt_n3.value)) / Number(3)
+
+        if (média < Number(9.4)) {
+            h3_notas.innerHTML = ` Sua média foi de ${média} `
+        }
+        else {
+            h3_notas.innerHTML = ` Sua média foi de ${média} <br>
+            Parabéns, você é fora de série! `
+        }
+
+    }
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(250, 245, 245);
+}
+.bot{
+    height: 30px;
+    border-radius: 70%;
+}
+.h3{
+    background-color: rgb(247, 236, 236);
+}
+
+</style>
+
+</html>

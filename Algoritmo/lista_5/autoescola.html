@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola</title>
+
+</head>
+
+<body>
+  
+    <div id="div"> 
+        <h1>  Autoescola identifica possíveis novos alunos</h1>
+        <label for="ipt_nome"> Insira seu nome </label>
+        <input type="text" id="ipt_nome"> <br>
+        <label for="ipt_idd"> Insira sua idade</label>
+        <input type="text" id="ipt_idd"> <br> 
+        <button class="bot" onclick="verificar()" > Avaliar aluno </button>
+        <h3 id="h3_idade"> </h3>
+
+    </div>
+
+</body>
+
+<script>
+
+function verificar(){
+    var idadeDig = Number(ipt_idd.value)
+    var nome = ipt_nome.value
+
+    if (idadeDig >= 18){
+        h3_idade.innerHTML = `${nome}, vamos tirar a CNH? `
+    }
+    else { 
+        h3_idade.innerHTML = `${nome}, vai jogar PlayStation! `
+    }
+
+}
+
+</script>
+
+<style>
+
+#div{
+    text-align: center;
+    background-color: rgb(255, 241, 241);
+}
+.bot{
+    height: 30px;
+    border-radius: 80%;
+}
+.h3{
+    background-color: rgb(247, 234, 234);
+
+}
+
+
+</style>
+
+</html>

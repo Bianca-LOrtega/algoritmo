@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+</head>
+
+<body>
+
+    <label> Digite o horário que você assiste Netflix: </label>
+    <input type="text" id="ipt_hora"> 
+    <button onclick="verifica()"> Avaliar horário </button>
+
+</body>
+
+<script>
+
+    function verifica() {
+
+        var hora = Number(ipt_hora.value)
+        
+
+        if (hora >= 19 && hora <= 21) {
+            alert(`Não é recomendável que você assista sua série favorita no horário ${hora}!` )
+        }
+        else {
+            alert(`O horário ${hora} é adequado para assistir sua série favorita!`)
+        }
+
+    }
+
+</script>
+
+</html>
